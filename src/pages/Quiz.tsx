@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Questions } from "../data/questions";
 import { useQuizStore } from "../store/quizSrote";
-
+import styles from "./Quiz.module.scss";
 function Quiz() {
   const { currentIndex, selectAnswer } = useQuizStore();
   const navigate = useNavigate();
@@ -22,19 +22,23 @@ function Quiz() {
   };
 
   return (
-    <>
-      <h1>{questions.question}</h1>
-      <span>
+    <div className={styles.container}>
+      <h1 className={styles.question}>{questions.question}</h1>
+      <div className={styles.answer}>
         {questions.options.map((text, idx) => (
-          <button key={idx} onClick={() => handleSelect(text.type)}>
-            {text.text}
+          <button
+            className={styles.button}
+            key={idx}
+            onClick={() => handleSelect(text.type)}
+          >
+            <span>{text.text}</span>
           </button>
         ))}
-      </span>
-      <p>
+      </div>
+      <p className={styles.pagenation}>
         {currentIndex + 1} / {Questions.length}
       </p>
-    </>
+    </div>
   );
 }
 

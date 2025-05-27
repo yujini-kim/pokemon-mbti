@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useQuizStore } from "../../store/quizSrote";
+import styles from "./ResetButton.module.scss";
 
 const ResetButton = () => {
   const navigate = useNavigate();
@@ -8,7 +9,11 @@ const ResetButton = () => {
     navigate("/quiz");
     reset();
   };
-  return <button onClick={onClick}>다시하기</button>;
+  return (
+    <button className={styles.button} onClick={onClick}>
+      <span>다시하기</span>
+    </button>
+  );
 };
 
 export default ResetButton;
