@@ -1,8 +1,5 @@
-       |
-
 <div align="center">
-  <br />
-  <img src="./images/project_logo.png" alt="Project" height="200px" />
+
   <br />
   <h1> 나는 어떤 포켓몬 MBTI일까? 🧠</h1>
   <a href="#">
@@ -17,21 +14,20 @@
 2. **기술 스택**
 3. **주요 기능**
 4. **주요 페이지**
-5. **개발 일정**
-6. **실행 방법**
+5. **폴더구조**
+6. **개선 포인트**
+7. **실행방법**
 
 <br />
 
 ## 💁🏻‍♂ 웹 서비스 소개
 
-&nbsp;&nbsp;간단한 질문에 답하면 당신의 성격과 닮은 포켓몬과 MBTI 유형을 알려주는 심리테스트입니다.  
+간단한 질문에 답하면 당신의 성격과 닮은 포켓몬과 MBTI 유형을 알려주는 심리테스트입니다.  
 Zustand를 활용한 상태관리 흐름을 학습하고자 시작한 프로젝트입니다.
 
 <br />
 
 ## 🛠 기술 스택
-
-**Front-end**
 
 - ![React](https://img.shields.io/badge/-React-61DAFB?&logo=react&logoColor=white)
 - ![TypeScript](https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white)
@@ -44,11 +40,9 @@ Zustand를 활용한 상태관리 흐름을 학습하고자 시작한 프로젝�
 
 - 1.  사용자 답변 상태 저장
 
-````tsx
 const { currentIndex, selectAnswer } = useQuizStore();
 
 - 2. MBTI 계산 로직
-
 
 <br />
 
@@ -61,16 +55,18 @@ const { currentIndex, selectAnswer } = useQuizStore();
 <br />
 
 ## 📁 폴더 구조
+
 src/
-├── assets/styles/      # 스타일 변수(SCSS)
-├── components/         # 주요 컴포넌트 (홈, 결과 등)
-├── data/               # 질문 및 결과 데이터
-├── pages/              # 라우트 페이지 구성
-├── store/              # Zustand 상태관리 store
+├── assets/styles/ # 스타일 변수(SCSS)
+├── components/ # 주요 컴포넌트 (홈, 결과 등)
+├── data/ # 질문 및 결과 데이터
+├── pages/ # 라우트 페이지 구성
+├── store/ # Zustand 상태관리 store
 
 <br />
 
-##🧪 개선 포인트
+## 🧪 개선 포인트
+
 ✅ 1. MBTI 계산 로직의 한계
 현재는 각 축에서 선택 수가 같을 경우 앞의 항목(E, S, T, J)이 선택됩니다.
 
@@ -89,7 +85,7 @@ scss
 복사
 편집
 .button {
-  width: 250px; // 고정 너비
+width: 250px; // 고정 너비
 }
 또는 transform 값을 px 기준으로 정렬하여 일관성 유지
 
@@ -102,7 +98,7 @@ scss
 ```bash
 $ git clone https://github.com/yujini-kim/pokemon-mbti.git
 
-````
+```
 
 2. **실행 2**
 
